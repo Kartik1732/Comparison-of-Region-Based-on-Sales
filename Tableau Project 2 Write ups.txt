@@ -1,0 +1,118 @@
+Course end project - 2
+
+Using sample super store data
+
+Load Data into tableau 
+
+Sheet 1 
+
+* Use Group by from Data Source Table on a Folder to create a
+folder to segregate the required data
+
+Step 1 - right click on any dimension or measure - group by - folder
+Step 2 - right click on product name - folder - create folder
+Step 3 - add category, product id and sub category to the folder (drag and drop)
+
+* Create a hierarchy called Location
+
+Step 1 - Drag state to country, pop up box appears name it as Location Hierachy
+Step 2 - Then drag region, city and then postal code
+
+* Create Parameters for Primary Region and Secondary Region
+
+Step 1 - Create parameter - Name = Primary Region, - Data type = String, Allowable values = List - East, west, central, south - ok 
+Step 2 - Right click on primary region - duplicate - rename to secondary region
+
+* Create a Calculated Field for both Primary Region and Secondary Region
+
+Create Calculated field - Name = Primary field and same for secondary field as well
+
+Step 1 - Drag Primary Field to text, primary region - show parameter
+
+* Create a Calculated Field and name it as the First Order Date, Total Sales, Average Sales per Order, No. of Customers, No. of Orders and
+No. of Products in Sale
+
+Step 1 - Create calculated field 
+Name = First date of sale 
+Min(order date) - Apply - ok 
+Then darg First date of sale and sales to the text
+
+Step 2 - Average Sales per Order
+Create calculated field 
+Name =  Average Sales per Order
+sum(sales)/countd(order id) - apply - ok
+Then darg Average Sales per Order to the text
+
+Step 3 - No. of Customers
+Drag customer id to txt - right click - measure - countd
+
+Step 4 - No. of Orders
+Drag Order id to txt - right click - measure - countd
+
+Step 5 - No. of Products in Sale
+Drag product id to txt - right click - measure - countd
+
+Step 6 - text - 3 dots - Give the label names - apply - ok - entire view
+
+Sheet 2 
+
+Step 1 - Drag country and sales to the sheet
+Step 2 - Change automatic to filled map
+Step 3 - Drag sales on tooltip
+
+Sheet 3 
+
+Step 1 - Sub category to rows and sales to the table - change the sales to min by rightclick - measure - min
+Step 2 - Drag sales again and change it to max
+Step 3 - Drag sales again to show the sum
+
+Sheet 4 
+
+Step 1 - sales to rows, order date to columns, change it to month level from below month
+Step 2 - Drag sub category to rows and make entire view
+Step 3 - Uncheck show header to sales, sub category, order date
+
+Sheet 5 
+
+Step 1 - Sub category to rows, sales in columns
+Step 2 - Uncheck show header to sub category
+
+Sheet 1 
+
+Step 1 - Drag region to filters - condition - By formula - (region)=(primary field) - Apply - ok
+Step 2 - right click on region in filter section - apply worksheets - select all - ok
+
+* Creating Dasdhboard 
+Drag and drop all sheets into the dashboard
+Hide title for all sheets
+
+Duplicate all 5 sheets
+Sheet 1(2) 
+
+Step 1 - Right click on region - edit filter - change primary to secondary field - apply - ok
+Step 2 - remove region filter from rest all 4 sheets
+Step 3 - right click on region in filter section - apply worksheets - select  all duplicate sheets - ok
+Step 4 - Secondary region - show parameter
+
+Dashbord
+
+Apply Horizontal container and add all sheets
+Do the formatting by changing the colours and fontsize etc
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
